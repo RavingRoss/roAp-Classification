@@ -1,4 +1,6 @@
-![](https://github.com/RavingRoss/roAp-Classification/blob/main/Sphar_l3_m0_RB.gif)
+<p align="center">
+  <img width="600" height="200" src="[https://www.python.org/python-.png](https://github.com/RavingRoss/roAp-Classification/blob/main/Sphar_l3_m0_RB.gif)">
+</p>
 # roAp-Classification
 The goal of this project is to find rapidly oscillating Ap stars (roAps) candidates in star clusters using known data. 
 ## Description
