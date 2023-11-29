@@ -1,0 +1,33 @@
+Import packages
+set roAp file to r 
+set cluster file from Gaia to c
+make r a Dataframe and set to roAp
+make c a Dataframe and set to clust
+Append Dataframes and set GMAG to y for both roAp and clust
+Append Dataframes and set BP-RP to x for both roAp and clust
+Transpose x and y values of roAp Dataframe and set to 1xM array
+|GMAG of clust - GMAG of roAp| and set to a NxM array yrc 
+|BP_RP of clust - BP_RP of roAp| and set to a NxM array xrc
+finding the ellipse angle parameter by setting theta = arctan(yrc/xrc)
+square the errors of GMAG and BP_RP for both roAP and clust arrays
+Transpose x and y sigmas of roAp Dataframe and set to 1xM array
+finding sqrt(GMAG of clust and GMAG of roAp) and set to NxM syrc
+finding sqrt(BP_RP of clust and BP_RP of roAp) and set to NxM sxrc
+set syrc to semi-minor axis (b) of ellipse
+set sxrc to semi-major axis (a) of ellipse
+set b*sin(theta) to the theoretical y position
+set a*cos(theta) to the theoretical x position
+plot known data to show the entire color magnitude diagram
+calculating the zeroth error ellipse from semi major and minor axes
+plotting the zeroth roAp star with its error ellipse to demonstrate
+repeating this with all roAps
+plotting all error ellipses vs. clust for visualization with n*sigmas
+for int in range(len(clust array))
+    if (theoretical y and x positions are less than real postions)
+        classify as candidate and set to cands
+        store cands as Dataframe
+export cands as csv file
+plot cands vs. roAps, clust, and error ellipses with n*sigmas
+compare data with previous data found from regression algorithm
+plot similarities and discontinuities
+store and export all data and catigorize if repeated 
